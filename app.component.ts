@@ -9,11 +9,11 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'sprint';
   constructor(private router:Router) {}
-  OnClick()
-  {
-    this.router.navigateByUrl('home')
-  }
-  OnPress()
+  // OnClick()
+  // {
+  //   this.router.navigateByUrl('carsummary')
+  // }
+  ngOnInit()
   {
     this.router.navigateByUrl('login')
   }
