@@ -1,23 +1,39 @@
+<div class="role"> 
+  <button> Administrator</button> 
+  <button> Customer </button>
+</div>
+
 <div>
-    <table>
+  <table>
+    <tr class="first">
+      <div>
+      <td>Username</td>
+    </div>
+    <div>
+      <td><input class="inp" type="text" [(ngModel)]="user.userName"></td>
+    </div>
+    </tr>
+    <tr class="second">
+      <div>
+      <td>Password</td>
+    </div>
+    <div>
+      <td><input class="inp" type="password" [(ngModel)]="user.password"></td>
+    </div>
+    </tr>
+     
       <tr>
-        <td>Username</td>
-        <td><input type="text" [(ngModel)]="user.userName"></td>
-      </tr>
-      <tr>
-        <td>Password</td>
-        <td><input type="password" [(ngModel)]="user.password"></td>
-      </tr>
-       
-        <tr>
-        <td colspan="2">
-          <button (click)="Validate()">Sign In</button>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="1">
-          <span style="color: red;">{{errMsg}}</span>
-        </td>
-      </tr>
-    </table>
-  </div>
+        <div>
+      <td colspan="2">
+        <button (click)="Validate()">Sign In</button>
+      </td>
+    </div>
+    </tr>
+    <tr>
+      <td colspan="1">
+        <span style="color: red;">{{errMsg}}</span>
+      </td>
+    </tr>
+  </table>
+</div>
+

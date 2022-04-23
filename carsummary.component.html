@@ -1,0 +1,45 @@
+<div>
+  <button (click)="  OnClickBack()"> Back </button>
+</div>
+<br>
+<div class="table-wrapper">
+  <table class="fl-table">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Model</th>
+      <th>Manufacturer Id</th>
+      <th>Type</th>
+      <th>Engine</th>
+      <th>BHP</th>
+      <th>Transmission Type</th>
+      <th>Mileage</th>
+      <th>Seat</th>
+      <th>Air Bag Deatils</th>
+      <th>Boot Space</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+
+    <tbody>
+    <tr *ngFor="let item of cars">
+      <td>{{item.id}}</td>
+      <td>{{item.model}}</td>
+      <td>{{item.manufracturerId}}</td>
+      <td>{{item.typeId}}</td>
+      <td>{{item.engine}}</td>
+      <td>{{item.bhp}}</td>
+      <td>{{item.transmissionId}}</td>
+      <td>{{item.mileage}}</td>
+      <td>{{item.seat}}</td>
+      <td>{{item.airBagDetails}}</td>
+      <td>{{item.bootSpace}}</td>
+      <td>{{item.price}}</td>
+    </tr>
+  </tbody>
+  </table>
+</div>
+  <br>
+  <br>
+
+

@@ -1,33 +1,14 @@
-li
-{
-    text-align:left;
-    text-decoration-color:black;
-    font-family: Georgia;
-   font-size: 18px;
-
-}
-h2
-{
-    text-align:left;
-    text-decoration-color:black;
-}
-.logout-button
-{
-    margin-right: 20px;
-    float:right;
-}
 button{
 	cursor: pointer;
   border-width: 2px;
     line-height: 36px;
     border-style: solid;
-    background: white;
+    background: transparent;
     height: 40px;
     line-height: 40px;
     padding: 0 17px;
     font-size: 14px;
-    margin-bottom: 30px;
-    margin-left: 20%;
+    margin: 25px;
     position: relative;
     display: inline-block;
     text-align: center;
@@ -41,4 +22,34 @@ button{
 button:hover{
 	background-color: rgb(0, 188, 212);
     color: rgb(255, 255, 255) !important;
+}
+
+div{
+	margin-left:35%;
+  /* margin-top: 5%; */
+}
+.role
+{
+  margin-left:35%;
+}
+
+.first{
+	font-family:serif;
+}
+.second{
+	font-family:serif;
+}
+.inp{
+	font-family: 'Roboto', sans-serif;
+  color: #333;
+  font-size: 1.2rem;
+	margin: 0 auto;
+  padding: 0.2rem 1rem;
+  border-radius: 0.2rem;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  width: 90%;
+  display: block;
+  border-bottom: 0.3rem solid transparent;
+  transition: all 0.3s;
 }
