@@ -1,19 +1,18 @@
 <div>
-  <button (click)="  OnClickBack()"> Back </button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-  <button (click)="  OnClickGo()"> Discontinued Cars</button>
+  <button (click)="  OnClickBack()"> Back </button>
 </div>
-<br>
+
 <div class="table-wrapper">
   <table class="fl-table">
     <thead>
     <tr>
       <th>ID</th>
-      <th>Model</th>
       <th>Manufacturer Id</th>
+      <th>Model</th>
       <th>Type</th>
       <th>Engine</th>
       <th>BHP</th>
-      <th>Transmission Type</th>
+      <th>Transmission Id</th>
       <th>Mileage</th>
       <th>Seat</th>
       <th>Air Bag Deatils</th>
@@ -25,8 +24,8 @@
     <tbody>
     <tr *ngFor="let item of cars">
       <td>{{item.id}}</td>
-      <td>{{item.model}}</td>
       <td>{{item.manufracturerId}}</td>
+      <td>{{item.model}}</td>
       <td>{{item.type}}</td>
       <td>{{item.engine}}</td>
       <td>{{item.bhp}}</td>
@@ -40,7 +39,3 @@
   </tbody>
   </table>
 </div>
-  <br>
-  <br>
-
-

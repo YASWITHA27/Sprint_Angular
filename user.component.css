@@ -1,28 +1,9 @@
-li
-{
-    text-align:left;
-    text-decoration-color:black;
-    font-family: Georgia;
-   font-size: 18px;
-
-}
-h2
-{
-    text-align:left;
-    text-decoration-color:black;
-}
-.logout-button
-{
-    margin-right: 20px;
-    float:right;
-    margin-top: 0%;
-}
 button{
-    border: none;  
+  border: none;  
     padding: 12px 30px;  
     margin: 10px auto;  
     display: inline;  
-    font-size: 18px; 
+    font-size: 20px; 
     font: weight 400px;;
     color: #fff;
     font-weight:200;  
@@ -35,13 +16,14 @@ button{
     cursor: pointer;  
 }
 button:hover{
-    background-position: 0% 200%; 
+  background-position: 0% 200%;  
 }
-.new
+.adm
 {
-    margin-left: 25pc;
+  margin-right: 20%;
 }
-.dn
-{
-padding-top: 50px;
+
+div{
+	margin-left:35%;
+  /* margin-top: 5%; */
 }

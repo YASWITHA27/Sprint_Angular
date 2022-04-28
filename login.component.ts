@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
 import { Router } from '@angular/router';
-
+import { FormControl } from '@angular/forms';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -15,6 +15,10 @@ errMsg:string=''
    }
 
   ngOnInit(): void {
+  }
+  GotoUser()
+  {
+    this.router.navigateByUrl('user');
   }
   Validate()
   {

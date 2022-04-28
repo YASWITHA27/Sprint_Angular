@@ -1,31 +1,42 @@
-<!-- <div class="role"> 
-  <button> Administrator</button> 
-  <button> Customer </button>
-</div> -->
-
-<!-- <form class="wrapper">
-  <div class="inputWrapper">
-    <label for="username">Username</label>
-    <input [(ngModel)]="user.userName" type="text" />
-  </div>
-  <div class="inputWrapper">
-    <label for="password">Password</label>
-    <input [(ngModel)]="user.password" type="text"/>
-  </div>
-  <div class="buttonstyle"> 
-    <button class="submitButton" (click)="Validate()">Sign In</button>&nbsp;
-    <button class="submitButton" (click)="GotoUser()">Back to user</button> &nbsp;
-  </div>
-  <div>
-    <span style="color: red">{{ errMsg }}</span>
-  </div>
-</form> -->
-
+<!-- 
+<div>
+    <table>
+      <tr class="first">
+        <div>
+        <td>CustUsername</td>
+      </div>
+      <div>
+        <td><input class="inp" type="text" [(ngModel)]="user.userName"></td>
+      </div>
+      </tr>
+      <tr class="second">
+        <div>
+        <td>Password</td>
+      </div>
+      <div>
+        <td><input class="inp" type="password" [(ngModel)]="user.password"></td>
+      </div>
+      </tr>
+       
+        <tr class="third">
+            <button (click)="Validate()">Sign In</button> 
+            <button (click)="GotoUser()"> Back to user </button>
+        </tr>
+    
+      <tr>
+        <td colspan="1">
+          <span style="color: red;">{{errMsg}}</span>
+        </td>
+      </tr>
+    </table>
+  </div> -->
+  
+  
 <div class="wrapper">
   <table>
     <tr class="inputWrapper">
       <div>
-      <td>Username</td>
+      <td>CustUsername</td>
     </div>
     <div>
       <td><input class="inp" type="text" [(ngModel)]="user.userName"></td>

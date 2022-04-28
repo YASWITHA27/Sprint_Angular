@@ -1,33 +1,36 @@
-
- <button class="logout-button" (click)="OnPressLogout()">Logout</button>
- <!-- Adding the header name --> 
-<h2> About  </h2>     
-       
-<!-- Adding the information in the form f unorder list to have them in poits wise    -->
-
-<ul> <li>Car Information Management System (CIMS) helps Customers view the complete
-    information about a given company's car like Features, Engine & Performance, Safety,
-    etc </li>
-
-    <br>
-<li> By clicking on the following "CRUD OPERATIONS" buttton as an administrator one can be able to add the car details,
-    update the car detials w.r.t to model also delete car information w.r.t model and search the particular car w.r.t model.   
-</li>
-<br> 
-
-<li> Please click on the Car Summary button to see all the updated database reflecting after performing the crud operations  
-</li>
-<br>
-<li>Please click on CRUD OPERATIONS button to perform the above functionalities</li>
-
-</ul>
-
- <!-- Declaring the functionalities to be performed when we click that particular button mentioned  -->
-<br> 
-    <div>
-      <button (click)="OnClick1()"> CRUD OPERATIONS </button> &nbsp; &nbsp;&nbsp;
-      <button (click)=" OnClicksummary()">Car Summary</button> &nbsp; &nbsp;
-    </div>
-    <br>
-
-
+<div class="up">
+    <button class="logout-button" (click)="OnPressLogout()">Logout</button>
+   </div>
+    <!-- Adding the header name --> 
+    <div class="dn">
+   <h2> About  </h2>       
+   </div>   
+   <!-- Adding the information in the form f unorder list to have them in poits wise    -->
+   
+   <ul> <li>Car Information Management System (CIMS) helps Customers view the complete
+       information about a given company's car like Features, Engine & Performance, Safety,
+       etc </li>
+   
+       <br>
+   <li> By clicking on the following "CRUD OPERATIONS" buttton as an administrator one can be able to add the car details,
+       update the car detials w.r.t to model also delete car information w.r.t model and search the particular car w.r.t model.   
+   </li>
+   <br> 
+   
+   <li> Please click on the Car Summary button to see all the updated database reflecting after performing the crud operations  
+   </li>
+   <br>
+   <li>Please click on CRUD OPERATIONS button to perform the above functionalities</li>
+   
+   </ul>
+   
+    <!-- Declaring the functionalities to be performed when we click that particular button mentioned  -->
+   <br> 
+       <div class="new">
+         <button (click)="OnClick1()"> CRUD Operations </button> &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+         <button (click)=" OnClicksummary()">Car Summary</button> &nbsp; &nbsp;
+       </div>
+       <br>
+   
+   
+   

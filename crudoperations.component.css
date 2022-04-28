@@ -1,9 +1,13 @@
-.tdClass
+
+/* .tdClass
 {
   font-size:20px;
   font-weight:lighter;
-}
-button{
+  font-family:'Roboto',sans-serif;
+} */
+
+
+/* button{
     display:inline-block;
     padding:0.3em 1.2em;
     margin:0 0.3em 0.3em 0;
@@ -21,7 +25,77 @@ button{
 button:hover
 {
     background-color:#4095c6;
-}
+} */
 div{
     margin-left: 30%;
+}
+.wrapper {  
+  max-width: 550px;  
+  /* width: 100%;   */
+  height:500px;
+  padding: 30px;  
+  border-radius: 30px;  
+  background: rgb(243, 143, 196) linear-gradient(22deg, aqua,rgb(186, 137, 233), deeppink) fixed; 
+  box-shadow: 0 35px 68px 0 rgba(136, 174, 222, 0.42), inset 0 -8px 16px 0 #b9d1f1;  
+  overflow-x: auto;
+  overflow-y:scroll;
+  margin-top: 0px !important;
+  margin-bottom: 100px;
+}  
+.inputWrapper {  
+  display: flex;  
+  flex-direction: column;  
+  align-items:baseline;  
+  justify-content: flex-start;  
+  /* width: 200%;  */
+  /* height:200%;  */
+  margin: 0 0 16px 0; 
+  font-size:20px;
+  font-weight:lighter;
+}  
+.inputWrapper label {  
+  margin: 0 0 4px 0;  
+}  
+.inputWrapper input {  
+  width: 90%;  
+  padding: 8px 16px;  
+  font-size: 16px;  
+  border-radius: 8px;  
+  border: 1px solid #b5d4ff;  
+  color: #576d95;  
+  outline-color: #236eb9;  
+} 
+
+.inputWrapper select {  
+  width: 90%;  
+  padding: 8px 16px;  
+  font-size: 16px;  
+  border-radius: 8px;  
+  border: 1px solid #b5d4ff;  
+  color: #576d95;  
+  outline-color: #236eb9;  
+} 
+
+.submitButton {  
+  border: none;  
+  padding: 12px 30px;  
+  margin: 10px auto;  
+  display: inline;  
+  font-size: 20px;  
+  color: #fff;
+  font-weight:200;  
+  border-radius: 8px;  
+  background-image: linear-gradient(90deg, #5fc7ff 50%, #192ea9 100%);  
+  background-size: 200% 100%;  
+  background-position: 100% 100%;  
+  transition: background-position 256ms;  
+  will-change: background-position;  
+  cursor: pointer;  
+}  
+.submitButton:hover {  
+  background-position: 0% 200%;  
+}
+.buttonstyle{
+  display: inline;
+  margin: auto;
 }

@@ -1,89 +1,90 @@
-<div>
-    <table>
-      <!-- <tr>
-        <td>ID</td>
-        <td><input type="text" name="" id="" [(ngModel)]="car.id"></td>
-      </tr> -->
-      <tr>
-        <td class="tdClass">Model</td>  <!---Doing 2 way binding using ngModel attribute-->
-        <td><input type="text" name="" id="" [(ngModel)]="car.model"></td>
-      </tr>
-    <tr>
-      <td class="tdClass">Manufacturer Id</td>
-      <td><input type="text" name="" id="" [(ngModel)]="car.manufracturerId"></td>
+<button class="submitButton" (click)="  OnClickBack()"> Back </button>
+<div class="wrapper">
+  <table>
+    <!-- <tr>
+      <td>ID</td>
+      <td><input type="text" name="" id="" [(ngModel)]="car.id"></td>
+    </tr> -->
+    <tr class="inputWrapper">
+      <td >Model</td>  <!---Doing 2 way binding using ngModel attribute-->
+      <td><input type="text" name="" id="" [(ngModel)]="car.model"></td>
     </tr>
-
-      <tr>
-        <td class="tdClass"> Type </td>
-        <td><select name="" id="" [(ngModel)]="car.typeId">
-          <option value="Hatchback">Hatchback</option>
-            <option value="Sedan">Sedan</option>
-            <option value="SUV">SUV</option>
-        </select></td>
-      </tr>
-
-      <!-- <tr>
-        <td class="tdClass"> Engine </td>
-        <td>
-            <input type="radio" name="IsEnabled" value="true" />
-            <label>True</label>
-                         
-                            <input type="radio" name="IsEnabled" value="false" />
-                         <label>False</label>
-        </td>
-      </tr> -->
-
-      <tr>
-        <td class="tdClass"> Engine </td>
-        <td>
-          <input type="text" id="name" name="name" class="form-control"
-      required maxlength="4"
-      required pattern="[0-9].[0-9][L]"
-      [(ngModel)]="car.engine">
-    </td>
+  <tr class="inputWrapper">
+    <td >Manufacturer Id</td>
+    <td><input type="text" name="" id="" [(ngModel)]="car.manufracturerId"></td>
   </tr>
 
-      <tr>
-        <td class="tdClass"> BHP </td>
-        <td><input type="number" name="" id="" [(ngModel)]="car.bhp"></td>
-      </tr>
-      <tr>
-        <td class="tdClass"> Transmission Type </td>
-        <td><select name="" id="" [(ngModel)]="car.transmissionId">
-          <option value="Manual">Manual</option>
-            <option value="Automatic">Automatic</option>
-        </select></td>
-      </tr>
-      <tr>
-        <td class="tdClass"> Mileage </td>
-        <td><input type="number" name="" id="" [(ngModel)]="car.mileage"></td>
-      </tr>
-      <tr>
-        <td class="tdClass"> Seat </td>
-        <td><input type="number" name="" id="" [(ngModel)]="car.seat"></td>
-      </tr>
-      <tr>
-        <td class="tdClass"> Air Bag Details: </td>
-        <td><input type="text" name="" id="" [(ngModel)]="car.airBagDetails"></td>
-      </tr>
-      <tr>
-        <td class="tdClass">  Boot Space </td>
-        <td><input type="text" name="" id="" [(ngModel)]="car. bootSpace"></td>
-      </tr>
-      <tr>
-        <td class="tdClass"> Price </td>
-        <td><input type="number" name="" id="" [(ngModel)]="car.price"></td>
-      </tr>
-      <tr>
-        <td colspan="2"> <!--- Declaring the functionalities to be implemented when the button is clicked-->
-          <button (click)="AddCar()">Add</button> &nbsp;
-          <button (click)="GetCarByModel()">Search</button> &nbsp;
-          <button (click)="UpdateCar()">Update</button> &nbsp;
-          <button (click)="DeleteCar()">Delete</button> &nbsp; &nbsp;
-          <button (click)="  OnClickBack()"> Back </button>
-        </td>
-      </tr>
-    </table>
-  </div>
+    <tr class="inputWrapper">
+      <td > Type </td>
+      <td><select name="" id="" [(ngModel)]="car.type">
+        <option value="Hatchback">Hatchback</option>
+          <option value="Sedan">Sedan</option>
+          <option value="SUV">SUV</option>
+      </select></td>
+    </tr>
+
+    <!-- <tr>
+      <td class="tdClass"> Engine </td>
+      <td>
+          <input type="radio" name="IsEnabled" value="true" />
+          <label>True</label>
+                       
+                          <input type="radio" name="IsEnabled" value="false" />
+                       <label>False</label>
+      </td>
+    </tr> -->
+
+    <tr class="inputWrapper">
+      <td > Engine </td>
+      <td>
+        <input type="text" id="name" name="name" class="form-control"
+    required maxlength="4"
+    required pattern="[0-9].[0-9][L]"
+    [(ngModel)]="car.engine">
+  </td>
+</tr>
+
+    <tr class="inputWrapper">
+      <td > BHP </td>
+      <td><input type="number" name="" id="" [(ngModel)]="car.bhp"></td>
+    </tr>
+    <tr class="inputWrapper">
+      <td > Transmission Type </td>
+      <td><select name="" id="" [(ngModel)]="car.transmissionId">
+        <option value="Manual">Manual</option>
+          <option value="Automatic">Automatic</option>
+      </select></td>
+    </tr>
+    <tr class="inputWrapper">
+      <td > Mileage </td>
+      <td><input type="number" name="" id="" [(ngModel)]="car.mileage"></td>
+    </tr>
+    <tr class="inputWrapper">
+      <td > Seat </td>
+      <td><input type="number" name="" id="" [(ngModel)]="car.seat"></td>
+    </tr>
+    <tr class="inputWrapper">
+      <td > Air Bag Details: </td>
+      <td><input type="text" name="" id="" [(ngModel)]="car.airBagDetails"></td>
+    </tr>
+    <tr class="inputWrapper">
+      <td >  Boot Space </td>
+      <td><input type="text" name="" id="" [(ngModel)]="car. bootSpace"></td>
+    </tr>
+    <tr class="inputWrapper">
+      <td > Price </td>
+      <td><input type="number" name="" id="" [(ngModel)]="car.price"></td>
+    </tr>
+
+    <tr class="buttonstyle">
+      <td colspan="2"> <!--- Declaring the functionalities to be implemented when the button is clicked-->
+        <button class="submitButton" (click)="AddCar()">Add</button> &nbsp;
+        <button class="submitButton" (click)="GetCarByModel()">Search</button> &nbsp;
+        <button class="submitButton" (click)="UpdateCar()">Update</button> &nbsp;
+        <button class="submitButton" (click)="DeleteCar()">Delete</button> &nbsp; &nbsp;
+      </td>
+    </tr>
+  </table>
+</div>
 
 
