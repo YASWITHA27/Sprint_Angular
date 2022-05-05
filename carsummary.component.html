@@ -23,7 +23,28 @@
   </thead>
 
     <tbody>
-    <tr *ngFor="let item of cars">
+      <tr *ngFor="let item of cars">
+        <td>{{item.id}}</td>
+        <td><input type="text" [(ngModel)]="item.model" [disabled]="!item.isEditable"/></td>
+        <td><input type="text" [(ngModel)]="item.manufracturerId" [disabled]="!item.isEditable"/></td>
+        <td><input type="text" [(ngModel)]="item.type" [disabled]="!item.isEditable"/></td>
+        <td><input type="text" [(ngModel)]="item.engine" [disabled]="!item.isEditable"/></td>
+        <td><input type="number" [(ngModel)]="item.bhp" [disabled]="!item.isEditable"/></td>
+        <td><input type="text" [(ngModel)]="item.transmissionId" [disabled]="!item.isEditable"/></td>
+        <td><input type="number" [(ngModel)]="item.mileage" [disabled]="!item.isEditable"/></td>
+        <td><input type="number" [(ngModel)]="item.seat" [disabled]="!item.isEditable"/></td>
+        <td><input type="text" [(ngModel)]="item.airBagDetails" [disabled]="!item.isEditable"/></td>
+        <td><input type="text" [(ngModel)]="item.bootSpace" [disabled]="!item.isEditable"/></td>
+        <td><input type="number" [(ngModel)]="item.price" [disabled]="!item.isEditable"/></td>
+        <td><button (click)="RemoveCar(item.model)">Delete</button></td>
+        <td>
+          <button (click)="item.isEditable=!item.isEditable" *ngIf="!item.isEditable">Edit</button>
+          <button *ngIf="item.isEditable" (click)="EditCar(item.model,item.manufracturerId,item.type,item.engine,item.bhp,item.transmissionId,item.mileage,item.seat,item.airBagDetails,item.bootSpace,item.price)">Save</button>
+
+       </td>
+    </tr>
+
+    <!-- <tr *ngFor="let item of cars">
       <td>{{item.id}}</td>
       <td>{{item.model}}</td>
       <td>{{item.manufracturerId}}</td>
@@ -36,7 +57,7 @@
       <td>{{item.airBagDetails}}</td>
       <td>{{item.bootSpace}}</td>
       <td>{{item.price}}</td>
-    </tr>
+    </tr> -->
   </tbody>
   </table>
 </div>

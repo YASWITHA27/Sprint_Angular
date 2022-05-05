@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-home',
@@ -21,6 +22,8 @@ export class HomeComponent implements OnInit {
   OnPressLogout()
   {
     this.router.navigateByUrl('login')
+    
+    Swal.fire('Logged Out!', 'You can now close the window', 'success');
   }
   ngOnInit(): void {
   }
