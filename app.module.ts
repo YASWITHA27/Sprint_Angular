@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormGroup, FormsModule } from '@angular/forms';
 import{HttpClientModule} from '@angular/common/http';
+import {MatIconModule} from '@angular/material/icon';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -38,6 +40,8 @@ import { RegisteruserComponent } from './registeruser/registeruser.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    MatIconModule,
+    Ng2SearchPipeModule
   ],
   providers: [CarService, RegisterService],
   bootstrap: [AppComponent]

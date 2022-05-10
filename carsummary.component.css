@@ -24,6 +24,14 @@ button:hover
 {
 background-position: 0% 200%; 
 }
+.form-control
+{
+ border-radius:8px;
+ width:500px; 
+ padding:12px 30px;
+ font-size: 18px;
+ background-color:whitesmoke;
+}
 body{
   font-family: Helvetica;
   -webkit-font-smoothing: antialiased;
@@ -40,8 +48,7 @@ body{
   font-weight: normal;
   border: none;
   border-collapse: collapse;
-  width: 100%;
-  max-width: 100%;
+  /* width: 100%; */
   white-space: nowrap;
   background-color: white;
 }
@@ -54,6 +61,19 @@ body{
 .fl-table td {
   border-right: 1px solid #f8f8f8;
   font-size: 18px;
+}
+
+.input{
+  font-size: 18px;
+  width: 95px;
+
+}
+
+.operations{
+  width: 80px;
+  font-size: 14px;
+  font-weight: bolder;
+
 }
 
 .fl-table thead th {
@@ -76,7 +96,7 @@ body{
 @media (max-width: 767px) {
   .fl-table {
       display: block;
-      width: 100%;
+      /* width: 100%; */
   }
   .table-wrapper:before{
       content: "Scroll horizontally >";

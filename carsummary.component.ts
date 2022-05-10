@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 import { Car } from '../Models/car';
 import { CarService } from '../Services/car.service';
 
@@ -12,6 +13,7 @@ import { CarService } from '../Services/car.service';
 export class CarsummaryComponent implements OnInit {
   cars:Car[];
   car:Car;
+  searchText:any;
   constructor(private carService:CarService , private router:Router) { //creating a car object and assiging it to the local variable (initializing car model)
     this.car=new Car();
     this.carService.GetCarSummary().subscribe(response=>{
@@ -37,10 +39,12 @@ RemoveCar(model:string)
        // this.router.navigate['/carsummary'];
         this.GetCarSummary();  // used to reflect the new record to the table imediately 
       })
+      Swal.fire('Confirm', 'Are you Sure you want to Remove ?', 'warning');
     }
 
-    EditCar(model:string,manufracturerId:string,type:string,engine:string,bhp:number,
+    EditCar(id:number,model:string,manufracturerId:string,type:string,engine:string,bhp:number,
       transmissionId:string,mileage:number,seat:number,airBagDetails:string,bootSpace:string,price:number){
+      this.car.id=id;  
       this.car.model=model;
       this.car.manufracturerId=manufracturerId;
       this.car.type=type;
@@ -53,9 +57,17 @@ RemoveCar(model:string)
       this.car.bootSpace=bootSpace;
       this.car.price=price;
       this.carService.UpdateCar(this.car).subscribe(res=>{
+        this.GetCarSummary()
   
       })
-  
+      Swal.fire('Updated Successfully', 'You can now come back to check the updated details', 'success');
+    }
+    SearchCar(model:string)
+    {
+      this.carService.GetCarByModel(model).subscribe(res=>{  
+        this.car=res; 
+        this.GetCarSummary();
+    })
     }
     OnClickBack()
     {
@@ -64,6 +76,10 @@ RemoveCar(model:string)
     OnClickGo()
     {
       this.router.navigateByUrl('deletedcarsummary')
+    }
+    OnClickAddCar()
+    {
+      this.router.navigateByUrl('crudoperations')
     }
 
 }

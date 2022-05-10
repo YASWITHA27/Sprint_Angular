@@ -1,7 +1,12 @@
 <div>
   <button (click)="  OnClickBack()"> Back </button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-  <button (click)="  OnClickGo()"> Discontinued Cars</button>
+  <button (click)="  OnClickGo()"> Discontinued Cars</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  <button (click)="OnClickAddCar()">+ Add New Car</button>  &nbsp;&nbsp;&nbsp;
+  <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Start searching for car by its model">
 </div>
+ 
+
+  
 <br>
 <div class="table-wrapper">
   <table class="fl-table">
@@ -23,23 +28,24 @@
   </thead>
 
     <tbody>
-      <tr *ngFor="let item of cars">
+      <tr *ngFor="let item of cars | filter:searchText">
         <td>{{item.id}}</td>
-        <td><input type="text" [(ngModel)]="item.model" [disabled]="!item.isEditable"/></td>
-        <td><input type="text" [(ngModel)]="item.manufracturerId" [disabled]="!item.isEditable"/></td>
-        <td><input type="text" [(ngModel)]="item.type" [disabled]="!item.isEditable"/></td>
-        <td><input type="text" [(ngModel)]="item.engine" [disabled]="!item.isEditable"/></td>
-        <td><input type="number" [(ngModel)]="item.bhp" [disabled]="!item.isEditable"/></td>
-        <td><input type="text" [(ngModel)]="item.transmissionId" [disabled]="!item.isEditable"/></td>
-        <td><input type="number" [(ngModel)]="item.mileage" [disabled]="!item.isEditable"/></td>
-        <td><input type="number" [(ngModel)]="item.seat" [disabled]="!item.isEditable"/></td>
-        <td><input type="text" [(ngModel)]="item.airBagDetails" [disabled]="!item.isEditable"/></td>
-        <td><input type="text" [(ngModel)]="item.bootSpace" [disabled]="!item.isEditable"/></td>
-        <td><input type="number" [(ngModel)]="item.price" [disabled]="!item.isEditable"/></td>
-        <td><button (click)="RemoveCar(item.model)">Delete</button></td>
-        <td>
-          <button (click)="item.isEditable=!item.isEditable" *ngIf="!item.isEditable">Edit</button>
-          <button *ngIf="item.isEditable" (click)="EditCar(item.model,item.manufracturerId,item.type,item.engine,item.bhp,item.transmissionId,item.mileage,item.seat,item.airBagDetails,item.bootSpace,item.price)">Save</button>
+        <td><input class="input" type="text" [(ngModel)]="item.model" [disabled]="!item.isEditable"/></td>
+        <td><input class="input" type="text" [(ngModel)]="item.manufracturerId" [disabled]="!item.isEditable"/></td>
+        <td><input class="input" type="text" [(ngModel)]="item.type" [disabled]="!item.isEditable"/></td>
+        <td><input class="input" type="text" [(ngModel)]="item.engine" [disabled]="!item.isEditable"/></td>
+        <td><input class="input" type="number" [(ngModel)]="item.bhp" [disabled]="!item.isEditable"/></td>
+        <td><input class="input" type="text" [(ngModel)]="item.transmissionId" [disabled]="!item.isEditable"/></td>
+        <td><input class="input" type="number" [(ngModel)]="item.mileage" [disabled]="!item.isEditable"/></td>
+        <td><input class="input" type="number" [(ngModel)]="item.seat" [disabled]="!item.isEditable"/></td>
+        <td><input class="input" type="text" [(ngModel)]="item.airBagDetails" [disabled]="!item.isEditable"/></td>
+        <td><input class="input" type="text" [(ngModel)]="item.bootSpace" [disabled]="!item.isEditable"/></td>
+        <td><input class="input" type="number" [(ngModel)]="item.price" [disabled]="!item.isEditable"/></td>
+        
+          <td><button class="operations" (click)="RemoveCar(item.model)">Delete</button></td>
+        <td> 
+          <button class="operations" (click)="item.isEditable=!item.isEditable" *ngIf="!item.isEditable">Edit</button>
+          <button *ngIf="item.isEditable" (click)="EditCar(item.id,item.model,item.manufracturerId,item.type,item.engine,item.bhp,item.transmissionId,item.mileage,item.seat,item.airBagDetails,item.bootSpace,item.price)">Save</button>
 
        </td>
     </tr>

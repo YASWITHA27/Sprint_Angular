@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 import { Car } from '../Models/car';
 import { CarService } from '../Services/car.service';
 
@@ -36,6 +37,7 @@ export class CrudoperationsComponent implements OnInit {
       console.log(res);
       this.GetCarSummary(); // this is used to reflect the new record to the table imediately 
     })
+    Swal.fire('Submitted Car Details', 'You have successfully submitted the details of the car', 'success');
   }
   GetCarByModel()  //getting the car by model name
   {
